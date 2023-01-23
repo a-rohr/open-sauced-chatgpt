@@ -6,6 +6,7 @@ from langchain.chains import ConversationChain
 from langchain.llms import OpenAI
 from chains.chat_chain import *
 
+print("starting all over")
 chain = default_chain()
 
 # From here down is all the StreamLit UI.
