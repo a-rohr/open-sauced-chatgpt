@@ -1,6 +1,6 @@
 from langchain import OpenAI, ConversationChain, LLMChain, PromptTemplate
 from langchain.chains.conversation.memory import ConversationalBufferWindowMemory
-
+from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 
 def assistant_chain():
     template = """Assistant is a large language model trained by OpenAI.
@@ -33,4 +33,5 @@ def default_chain():
     """Logic for loading the chain you want to use should go here."""
     llm = OpenAI(temperature=0)
     chain = ConversationChain(llm=llm)
+    chain.prompt = ENTITY_MEMORY_CONVERSATION_TEMPLATE
     return chain
