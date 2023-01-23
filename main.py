@@ -20,14 +20,15 @@ if "past" not in st.session_state:
 
 
 def get_text():
-    input_text = st.text_input("You: ", "What date is it today?", key="input")
+    input_text = st.text_input("You: ", "What date is it today?", key="input", placeholder="Enter something...")
     return input_text
 
 
 user_input = get_text()
-print(user_input)
 
 if user_input:
+    print(user_input)
+    print("stuff happened")
     output = chain.run(input=user_input)
 
     st.session_state.past.append(user_input)
