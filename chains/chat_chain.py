@@ -33,5 +33,4 @@ def default_chain():
     """Logic for loading the chain you want to use should go here."""
     llm = OpenAI(temperature=0)
     chain = ConversationChain(llm=llm)
-    chain.prompt = ENTITY_MEMORY_CONVERSATION_TEMPLATE
     return chain
