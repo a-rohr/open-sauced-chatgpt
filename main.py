@@ -6,8 +6,8 @@ from langchain.chains import ConversationChain
 from langchain.llms import OpenAI
 from chains.chat_chain import *
 
-if "generated" not in st.session_state:
-    chain = default_chain()
+if "model" not in st.session_state:
+    st.session_state["model"] = default_chain()
 
 # From here down is all the StreamLit UI.
 st.set_page_config(page_title="Picus ChatGPT", page_icon=":robot:")
@@ -28,7 +28,7 @@ def get_text():
 user_input = get_text()
 
 if user_input:
-    output = chain.run(input=user_input)
+    output = st.session_state["model"].run(input=user_input)
 
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output)
