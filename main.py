@@ -25,6 +25,7 @@ def get_text():
 
 
 user_input = get_text()
+print(user_input)
 
 if user_input:
     output = chain.run(input=user_input)
