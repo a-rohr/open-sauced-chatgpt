@@ -16,7 +16,7 @@ def assistant_chain():
     Assistant:"""
 
     prompt = PromptTemplate(
-        input_variables=["history", "human_input"], 
+        input_variables=["history", "input"], 
         template=template
     )
 
