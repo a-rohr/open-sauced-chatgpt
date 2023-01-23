@@ -6,7 +6,7 @@ from langchain.chains import ConversationChain
 from langchain.llms import OpenAI
 from chains.chat_chain import *
 
-chain = assistant_chain()
+chain = default_chain()
 
 # From here down is all the StreamLit UI.
 st.set_page_config(page_title="Picus ChatGPT", page_icon=":robot:")
