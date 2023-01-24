@@ -7,7 +7,7 @@ from langchain.llms import OpenAI
 from chains.chat_chain import *
 
 if "model" not in st.session_state:
-    st.session_state["model"] = default_chain()
+    st.session_state["model"] = assistant_chain()
 
 # From here down is all the StreamLit UI.
 st.set_page_config(page_title="Picus ChatGPT", page_icon=":robot:")
